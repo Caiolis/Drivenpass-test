@@ -1,4 +1,4 @@
-import { User } from '@prisma/client';
+import { User } from "@prisma/client";
 
 export type ApplicationError = {
   name: string;
@@ -13,11 +13,20 @@ export type RequestError = {
 };
 
 export type NewCredential = {
-  userId:  number,
-  title:   String,
-  url:      String,
-  username: String,
-  password: String
-}
+  userId: number;
+  title: String;
+  url: String;
+  username: String;
+  password: String;
+};
 
-export type NewUser = Omit<User, "id" | "Credential">
+export type Credential = {
+  id: number;
+  userId: number;
+  title: String;
+  url: String;
+  username: String;
+  password: String;
+};
+
+export type NewUser = Omit<User, "id" | "Credential">;

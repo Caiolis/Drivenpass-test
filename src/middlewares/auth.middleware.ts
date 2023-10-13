@@ -1,7 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import * as jwt from "jsonwebtoken";
-import { unauthorizedError } from "@/errors";
-import { userRepository } from "@/repository";
+import { unauthorizedError } from "../errors/index";
+import { userRepository } from "../repository/index";
 
 export async function authenticateToken(
   req: AuthenticatedRequest,
